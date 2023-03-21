@@ -123,4 +123,4 @@ scheduler.start()
 
 @app.route("/api/getAllEvents")
 def get():
-    return json.dumps([obj.__dict__ for obj in event.returnData])
+    return json.dumps([obj.__dict__ for obj in returnData])
