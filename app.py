@@ -1,11 +1,10 @@
+import datetime
 import json
+import requests
+import wikipedia
+from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask
 from flask_cors import CORS
-import wikipedia
-import requests
-import json
-import datetime
-from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
