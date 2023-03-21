@@ -15,7 +15,3 @@ event.getDataFromApi()
 def get():
     return json.dumps([obj.__dict__ for obj in event.returnData])
 
-
-if __name__ == '__main__':
-    app.run()
-    event.getDataFromApi()
