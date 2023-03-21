@@ -1,0 +1,15 @@
+The files needs to be same directory
+
+To run application:
+    -  flask --app main run
+    -  if you see an message on terminal as "returnData has been filled." that means you can run front-end side to see timeline.
+       In additionally you can call flask api http://127.0.0.1:5000/api/getAllEvents on your local
+
+The scheduled method is working once a day at 23:59
+
+Pip Installations:
+	 pip install Flask
+	 pip install -U flask-cors
+	 pip install APScheduler
+
+Version : Python 3.9.13
