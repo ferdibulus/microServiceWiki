@@ -8,7 +8,7 @@ cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Start taking data from api in compile time
 print("Initial Data process has been started. It'll take approximately 15 minutes")
-#event.getDataFromApi()
+event.getDataFromApi()
 
 
 @app.route("/api/getAllEvents")
