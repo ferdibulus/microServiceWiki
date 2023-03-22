@@ -26,7 +26,8 @@ jobs:
       run: |
         pip install Flask
         pip install -U flask-cors
-        pip install APScheduler    
+        pip install APScheduler
+        pip install wikipedia
         
   deploy:
     runs-on: ubuntu-latest
