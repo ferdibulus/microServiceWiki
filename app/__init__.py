@@ -15,3 +15,7 @@ event.getDataFromApi()
 def get():
     return json.dumps([obj.__dict__ for obj in event.returnData])
 
+
+@app.route("/api/get1")
+def get1():
+    return "Deneme"
