@@ -7,5 +7,5 @@ RUN apk add --no-cache --virtual .build-deps gcc musl-dev \
     && pip install -U flask-cors \
     && pip install wikipedia \
     && apk del .build-deps
-EXPOSE 5000
+EXPOSE 8080
 CMD [ "flask", "run"]
