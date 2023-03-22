@@ -1,11 +1,13 @@
-FROM python:3.9-alpine
-WORKDIR /code
-COPY . .
-RUN apk add --no-cache --virtual .build-deps gcc musl-dev \
-    && pip install Flask \
+FROM tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
+
+RUN apk --update add bash nano git
+
+ENV STATIC_URL /static
+
+ENV STATIC_PATH /var/www/app/static
+
+
+RUN pip install Flask \
     && pip install APScheduler \
     && pip install -U flask-cors \
-    && pip install wikipedia \
-    && apk del .build-deps
-EXPOSE 8080
-CMD [ "flask", "run"]
+    && pip install wikipedia
